@@ -11,10 +11,10 @@ jobs:
         run: npm install
       - name: Build
         run: npm run build
-          env:
-       	    API_KEY_GM: ${{ secrets.API_KEY_GM }}
-   	        API_LOCATION: ${{ secrets.API_LOCATION }}
-            CLIENT_ID_PP: ${{ secrets.CLIENT_ID_PP }}
+        env:
+          API_KEY_GM: ${{ secrets.API_KEY_GM }}
+          API_LOCATION: ${{ secrets.API_LOCATION }}
+          CLIENT_ID_PP: ${{ secrets.CLIENT_ID_PP }}
       - name: Archive Production Artifact
         uses: actions/upload-artifact@master
         with:
